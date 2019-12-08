@@ -1,9 +1,9 @@
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 10%;
-}
+@import url("https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css");
 
-.center {
-  text-align: center;
+.dark-theme {
+  background: #333;
+  color: #fff;
+}
+.dark-theme .jumbotron {
+  background: #444;
 }

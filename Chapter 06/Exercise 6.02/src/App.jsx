@@ -1,6 +1,8 @@
 import React from "react";
 // styles
 import "./App.css";
+// component
+import { Modal } from "./Modal";
 
 function App() {
   return (
@@ -34,9 +36,7 @@ function App() {
           aftertaste foam, con panna and rich robust and aroma arabica.
         </p>
       </div>
-      <div className="modal">
-        <div className="modal_content">Text in overlay</div>
-      </div>
+      <Modal>Text in overlay</Modal>
     </div>
   );
 }

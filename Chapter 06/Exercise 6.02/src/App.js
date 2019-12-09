@@ -34,6 +34,9 @@ function App() {
           aftertaste foam, con panna and rich robust and aroma arabica.
         </p>
       </div>
+      <div className="modal">
+        <div className="modal_content">Text in overlay</div>
+      </div>
     </div>
   );
 }

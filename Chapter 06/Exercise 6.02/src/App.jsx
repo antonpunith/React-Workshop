@@ -2,7 +2,7 @@ import React from "react";
 // styles
 import "./App.css";
 // component
-import { Modal } from "./Modal";
+import { Modal } from "./Components/Modal";
 
 function App() {
   return (

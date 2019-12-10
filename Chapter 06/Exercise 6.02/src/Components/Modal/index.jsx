@@ -3,20 +3,8 @@ import React, { Component } from "react";
 import "./Modal.css";
 
 class Modal extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      showModal: true
-    };
-    this.toggleModal = this.toggleModal.bind(this);
-  }
-  toggleModal() {
-    this.setState({
-      showModal: !this.state.showModal
-    });
-  }
   render() {
-    if (!this.state.showModal) {
+    if (!this.props.showModal) {
       return null;
     }
     return (
@@ -24,7 +12,7 @@ class Modal extends Component {
         <div className="modal_content">
           {this.props.children}
           <div>
-            <button onClick={this.toggleModal}>Close</button>
+            <button onClick={this.props.toggleModal}>Close</button>
           </div>
         </div>
       </div>

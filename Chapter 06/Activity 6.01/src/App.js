@@ -1,9 +1,17 @@
 import React from "react";
 // styles
 import "./App.css";
+// data
+import productData from "./products.json";
+// components
+import { ProductListing } from "./Components/ProductListing";
 
-function App() {
-  return <div className="container center">Activity 6.01</div>;
-}
+const App = () => {
+  return (
+    <div className="container">
+      <ProductListing products={productData.products} />
+    </div>
+  );
+};
 
 export default App;

@@ -4,13 +4,14 @@ import { Tag } from "../Tag";
 
 class Tags extends Component {
   render() {
-    const { tags } = this.props;
-    console.log(tags);
+    const { tags, selectedTag } = this.props;
 
     return (
       <div>
         {tags.map((tag, key) => (
-          <Tag key={`tag${key}`}>{tag}</Tag>
+          <Tag key={`tag${key}`} selectedTag={selectedTag}>
+            {tag}
+          </Tag>
         ))}
       </div>
     );

@@ -3,10 +3,14 @@ import React from "react";
 import { Product } from "../Product";
 
 const ProductListing = props => {
-  const { products } = props;
+  const { products, selectedTag } = props;
+
+  const filteredProduct = selectedTag
+    ? products.filter(product => product.tags.includes(selectedTag))
+    : products;
   return (
     <div>
-      {products.map((product, key) => (
+      {filteredProduct.map((product, key) => (
         <Product key={key} product={product} />
       ))}
     </div>

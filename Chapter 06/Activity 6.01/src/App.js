@@ -13,6 +13,12 @@ class App extends Component {
     this.state = {
       selectedTag: null
     };
+    this.handleTags = this.handleTags.bind(this);
+  }
+  handleTags(tagName) {
+    return () => {
+      this.setState({ selectedTag: tagName });
+    };
   }
   render() {
     const { products, ingredients } = productData;
@@ -21,7 +27,11 @@ class App extends Component {
     return (
       <div className="container">
         <h1>Products</h1>
-        <Tags tags={ingredients} selectedTag={selectedTag} />
+        <Tags
+          tags={ingredients}
+          selectedTag={selectedTag}
+          handleTags={this.handleTags}
+        />
         <ProductListing products={products} selectedTag={selectedTag} />
       </div>
     );

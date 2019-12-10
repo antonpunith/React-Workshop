@@ -3,11 +3,12 @@ import React from "react";
 import "./tag.css";
 
 const Tag = props => (
-  <span
+  <button
     className={`tag ${props.selectedTag === props.children ? "active" : ""}`}
+    onClick={props.handleTags(props.children)}
   >
     {props.children}
-  </span>
+  </button>
 );
 
 export { Tag };

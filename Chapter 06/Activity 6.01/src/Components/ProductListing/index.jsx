@@ -11,7 +11,7 @@ const ProductListing = props => {
   return (
     <div>
       {filteredProduct.map((product, key) => (
-        <Product key={key} product={product} />
+        <Product key={product.name} product={product} />
       ))}
     </div>
   );

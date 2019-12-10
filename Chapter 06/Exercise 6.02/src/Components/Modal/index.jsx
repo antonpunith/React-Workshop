@@ -8,6 +8,12 @@ class Modal extends Component {
     this.state = {
       showModal: true
     };
+    this.toggleModal = this.toggleModal.bind(this);
+  }
+  toggleModal() {
+    this.setState({
+      showModal: !this.state.showModal
+    });
   }
   render() {
     if (!this.state.showModal) {
@@ -15,7 +21,12 @@ class Modal extends Component {
     }
     return (
       <div className="modal">
-        <div className="modal_content">{this.props.children}</div>
+        <div className="modal_content">
+          {this.props.children}
+          <div>
+            <button onClick={this.toggleModal}>Close</button>
+          </div>
+        </div>
       </div>
     );
   }

@@ -5,11 +5,15 @@ import "./App.css";
 import productData from "./products.json";
 // components
 import { ProductListing } from "./Components/ProductListing";
+import { Tags } from "./Components/Tags";
 
 const App = () => {
+  const { products, ingredients } = productData;
   return (
     <div className="container">
-      <ProductListing products={productData.products} />
+      <h1>Products</h1>
+      <Tags tags={ingredients} />
+      <ProductListing products={products} />
     </div>
   );
 };

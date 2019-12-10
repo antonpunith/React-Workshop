@@ -6,7 +6,6 @@ const ProductListing = props => {
   const { products } = props;
   return (
     <div>
-      <h1>Products</h1>
       {products.map((product, key) => (
         <Product key={key} product={product} />
       ))}

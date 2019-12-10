@@ -18,12 +18,16 @@ class Product extends Component {
     const { showDescription } = this.state;
     return (
       <div className="product">
-        <h2>{name}</h2>
+        <div className="product_header">
+          <h2>{name}</h2>
+          <div>
+            <button onClick={this.toggleDescription}>
+              {showDescription ? "-" : "+"}
+            </button>
+          </div>
+        </div>
         <strong>${price}</strong>
-        <button onClick={this.toggleDescription}>
-          {showDescription ? "-" : "+"}
-        </button>
-        {showDescription && <p>{summary}</p>}
+        <div>{showDescription && <p>{summary}</p>}</div>
       </div>
     );
   }

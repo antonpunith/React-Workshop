@@ -8,6 +8,7 @@ class Tags extends Component {
 
     return (
       <div>
+        Select Filter
         {tags.map((tag, key) => (
           <Tag
             key={`tag${key}`}
